@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+  align-items: flex-start;
+  background-color: var(--myrtle-green);
+}
+
+svg.header__logo {
+  width: 30px;
+  height: 30px;
+}
+h5.header__title {
+  margin-bottom: 0;
+}
