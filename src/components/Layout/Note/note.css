@@ -1,0 +1,33 @@
+div.note {
+  background-color: var(--cambridge-blue);
+  border-radius: 7px;
+  box-shadow: 0px 1px 5px 0px rgba(163, 187, 173, 1);
+  margin: 16px;
+  padding: 10px;
+  max-width: 240px;
+  min-width: 140px;
+  float: left;
+  color: var(--midnight-green);
+}
+
+div.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+div.note p {
+  max-height: 150px;
+  overflow-y: auto;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+button.note__button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: var(--midnight-green);
+  border: none;
+}
