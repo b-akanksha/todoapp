@@ -5,6 +5,7 @@ import "./createArea.css";
 
 const CreateArea = ({ onAdd }) => {
   const [note, setNote] = useState({ title: "", content: "" });
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,19 +21,24 @@ const CreateArea = ({ onAdd }) => {
     setNote({ title: "", content: "" });
   };
 
+  const handleExpand = () => setIsExpanded(true);
+
   return (
     <div>
       <form className="create-note">
-        <input
-          type="text"
-          name="title"
-          placeholder="Title"
-          onChange={handleChange}
-          value={note.title}
-        />
+        {isExpanded && (
+          <input
+            type="text"
+            name="title"
+            placeholder="Title"
+            onChange={handleChange}
+            value={note.title}
+          />
+        )}
         <textarea
           name="content"
-          rows={3}
+          rows={isExpanded ? 3 : 1}
+          onClick={handleExpand}
           placeholder="Take a note..."
           onChange={handleChange}
           value={note.content}
